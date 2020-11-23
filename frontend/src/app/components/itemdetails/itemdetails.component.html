@@ -1,0 +1,5 @@
+<table>
+    <tr *ngFor="let content of contents; let i = index">
+        <td class="item-class" (click)="clickId(content.id)">Item: {{content.item}},  Quantity: {{content.quantity}}</td>
+    </tr>
+</table>

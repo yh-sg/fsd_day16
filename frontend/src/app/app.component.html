@@ -1,0 +1,12 @@
+<h1 fxLayout="row" fxLayoutAlign="space-evenly center">My Cart</h1>
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <div fxFlex="20"><app-itemdetails [contents]="contents" (onId)="getId($event)"></app-itemdetails></div>
+  <div fxFlex="40"><app-itemlist></app-itemlist></div>
+</div>
+
+<!-- <table>
+  <tr>
+    <td style="width: 50;"><app-itemdetails></app-itemdetails></td>
+    <td><app-itemlist></app-itemlist></td>
+  </tr>
+</table> -->

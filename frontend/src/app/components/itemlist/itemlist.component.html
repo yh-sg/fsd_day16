@@ -1,13 +1,43 @@
 <div fxLayout="column" fxLayoutAlign="space-around" fxLayoutGap="20">
-    <form>
-        <input type="text">
-        <br>
-        <input type="text">
-        <br>
+    <form [formGroup]="form" (ngSubmit)="add()">
+        <!-- <div *ngFor="let item of itemList| keyvalue">
+            {{ item.key }} - {{ item.value }}
+        </div> -->
+            <!-- <div>Item: <em class="item-class">item</em></div>      
+            <br>
+            <div>Quantity: <em class="item-class">quan</em></div>
+            <br> -->
+
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td>
+                        <input type="text" formControlName="id">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item</td>
+                    <td>
+                        <input type="text" formControlName="item">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantiry</td>
+                    <td>
+                        <input type="text" formControlName="quantity">
+                    </td>
+                </tr>
+            </table>
+
+
+
+        <!-- <li *ngFor="let obj of itemList">{{obj | json}}</li> -->
+
+
         <div>
-            <button type="button">Delete</button>
-            <button type="button">Add</button>
-            <button type="button">Update</button>
+            <button type="button" (click)="delete()">Delete</button>
+            <button type="submit" [disabled]="form.invalid">Add</button>
+            <button type="button" (click)="update()">Update</button>
         </div>
     </form>
 </div>

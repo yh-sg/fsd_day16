@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ItemlistComponent } from './components/itemlist/itemlist.component';
 import { ItemdetailsComponent } from './components/itemdetails/itemdetails.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ CartService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

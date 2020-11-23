@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { cartItem } from 'src/app/models';
 
 @Component({
   selector: 'app-itemdetails',
@@ -17,7 +18,7 @@ export class ItemdetailsComponent implements OnInit {
   }
 
   clickId(id: String){
-    console.log(id);
+    // console.log(id);
     this.onId.next(id);
   }
 

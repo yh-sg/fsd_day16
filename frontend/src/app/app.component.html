@@ -1,7 +1,7 @@
 <h1 fxLayout="row" fxLayoutAlign="space-evenly center">My Cart</h1>
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
   <div fxFlex="20"><app-itemdetails [contents]="contents" (onId)="getId($event)"></app-itemdetails></div>
-  <div fxFlex="40"><app-itemlist></app-itemlist></div>
+  <div fxFlex="40"><app-itemlist [itemList]="contentList" (updatedItem)="updateItem($event)" (deletedItem)="deletedItem($event)" (addedItem)="addedItem($event)"></app-itemlist></div>
 </div>
 
 <!-- <table>
